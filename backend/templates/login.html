@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseChat AI | تسجيل الدخول</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { cairo: ["Cairo", "sans-serif"] },
+            colors: { primary: "#3B82F6", dark: "#0F172A", darker: "#020617", surface: "#1E293B" },
+          },
+        },
+      };
+    </script>
+    <style>body { font-family: "Cairo", sans-serif; }</style>
+</head>
+<body class="bg-darker min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md px-4">
+        <div class="text-center mb-8">
+            <i class="fa-solid fa-robot text-5xl text-primary mb-4"></i>
+            <h1 class="text-3xl font-bold text-white">PulseChat <span class="text-primary">AI</span></h1>
+            <p class="text-gray-400 mt-2">لوحة التحكم</p>
+        </div>
+
+        <div class="bg-surface border border-white/10 rounded-2xl p-8">
+            <h2 class="text-xl font-bold text-white mb-6 text-center">تسجيل الدخول</h2>
+
+            <div id="error-msg" class="hidden bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl mb-4 text-sm text-center"></div>
+
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label class="text-gray-400 text-sm mb-1 block">اسم المستخدم</label>
+                    <input type="text" name="username" required
+                        class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-right"
+                        placeholder="admin" />
+                </div>
+                <div>
+                    <label class="text-gray-400 text-sm mb-1 block">كلمة المرور</label>
+                    <input type="password" name="password" required
+                        class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-right"
+                        placeholder="••••••••" />
+                </div>
+                <button type="submit" id="login-btn"
+                    class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition-all">
+                    دخول
+                </button>
+            </form>
+        </div>
+
+        <p class="text-center text-gray-600 text-xs mt-6">&copy; 2026 PulseChat AI</p>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('login-btn');
+            const errorMsg = document.getElementById('error-msg');
+            errorMsg.classList.add('hidden');
+            btn.textContent = 'جاري الدخول...';
+            btn.disabled = true;
+
+            const formData = new FormData(this);
+            try {
+                const res = await fetch('/api/admin/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        username: formData.get('username'),
+                        password: formData.get('password'),
+                    }),
+                });
+
+                if (res.ok) {
+                    window.location.href = '/admin';
+                } else {
+                    const data = await res.json();
+                    errorMsg.textContent = data.detail || 'بيانات الدخول غير صحيحة';
+                    errorMsg.classList.remove('hidden');
+                }
+            } catch (err) {
+                errorMsg.textContent = 'حدث خطأ في الاتصال';
+                errorMsg.classList.remove('hidden');
+            }
+
+            btn.textContent = 'دخول';
+            btn.disabled = false;
+        });
+    </script>
+</body>
+</html>

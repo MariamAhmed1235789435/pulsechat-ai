@@ -880,16 +880,18 @@
         </p>
 
         <form
+          id="contact-form"
           class="bg-surface/80 backdrop-blur-lg p-8 rounded-3xl shadow-2xl max-w-lg mx-auto border border-white/10"
-          onsubmit="
-            event.preventDefault();
-            alert('تم استلام طلبك! سنتواصل معك قريباً.');
-          "
         >
+          <div id="form-success" class="hidden bg-green-500/10 border border-green-500/20 text-green-400 px-4 py-3 rounded-xl mb-4 text-center">
+            <i class="fas fa-check-circle ml-1"></i> <span id="success-text"></span>
+          </div>
+          <div id="form-error" class="hidden bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl mb-4 text-center text-sm"></div>
           <div class="space-y-4">
             <div>
               <input
                 type="text"
+                name="company_name"
                 placeholder="اسم الشركة"
                 class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-right"
                 required
@@ -898,6 +900,7 @@
             <div>
               <input
                 type="tel"
+                name="phone"
                 placeholder="رقم الهاتف (واتساب)"
                 class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-right"
                 required
@@ -905,7 +908,9 @@
             </div>
             <div>
               <select
+                name="sector"
                 class="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:border-primary transition-colors text-right"
+                required
               >
                 <option value="" disabled selected>اختر القطاع</option>
                 <option value="pharmacy">صيدلية</option>

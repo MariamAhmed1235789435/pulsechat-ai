@@ -1,0 +1,6 @@
+backend/venv/
+backend/leads.db
+backend/.env
+__pycache__/
+*.pyc
+nul
