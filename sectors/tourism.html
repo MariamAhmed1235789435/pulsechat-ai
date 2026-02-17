@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseChat AI | السياحة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../image.png" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { cairo: ["Cairo", "sans-serif"] },
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#8B5CF6",
+              accent: "#10B981",
+              dark: "#0F172A",
+              darker: "#020617",
+              surface: "#1E293B",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="../index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-robot text-3xl text-primary animate-pulse"></i>
+            <span class="text-2xl font-bold tracking-wide">PulseChat <span class="text-primary">AI</span></span>
+          </a>
+          <a href="../index.html#sectors" class="bg-surface hover:bg-slate-700 border border-white/10 text-white px-6 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2">
+            <i class="fas fa-arrow-right"></i>
+            رجوع للقطاعات
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sector Content -->
+    <section class="pt-32 pb-20 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card rounded-2xl overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <!-- Right Side: Content -->
+            <div class="p-8 md:p-10 order-2 md:order-1">
+              <div class="inline-block px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 font-semibold text-xs mb-4">
+                قطاع السياحة
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">إزاي بيشتغل مع شركات السياحة؟</h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">شركات السياحة بتوظف 10-15 موظف بيتكلموا لغات مختلفة بمرتبات عالية جداً — الـ AI Agent بيعمل كل ده لوحده وبيوفر بادجت ضخمة.</p>
+
+              <div class="space-y-4">
+                <div class="flex gap-3 items-start">
+                  <div class="bg-sky-500/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-globe text-sky-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">دعم كل اللغات بدون توظيف</h4>
+                    <p class="text-sm text-gray-400">بيتكلم عربي، إنجليزي، فرنسي، ألماني، إسباني، وعشرات اللغات التانية — بدل ما تدفع مرتبات عالية لموظفين بيتكلموا لغات، الـ AI بيغطي كل اللغات لوحده.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-green-500/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-dollar-sign text-green-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">ترشيح باكدجات حسب البادجت</h4>
+                    <p class="text-sm text-gray-400">العميل بيقول "بادجتي 1000 دولار وعايز أسافر" — الـ AI بيجيب من الداتا ويرشح فنادق ورحلات وباكدجات تناسب البادجت بالضبط.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-secondary/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-suitcase-rolling text-secondary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">تجميع باكدجات مخصصة</h4>
+                    <p class="text-sm text-gray-400">بيجمع فندق + جروب + رحلة في باكدج كامل — سواء دبي، السعودية، الساحل، أو أي وجهة تانية. كل ده في ثواني مع أكشنز كتيرة جداً.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-accent/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-headset text-accent"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">خدمة عملاء بكل اللغات 24/7</h4>
+                    <p class="text-sm text-gray-400">استفسارات، حجوزات، تعديلات، وإلغاءات — كل ده بأي لغة في أي وقت من غير ما تحتاج فريق كبير.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left Side: Visual -->
+            <div class="relative bg-surface order-1 md:order-2 min-h-[300px] md:min-h-full flex items-center justify-center p-8">
+              <div class="w-full max-w-sm space-y-4">
+                <!-- Chat Simulation -->
+                <div class="bg-dark/60 rounded-2xl p-5 border border-white/5">
+                  <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/5">
+                    <div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center">
+                      <i class="fas fa-plane text-sky-400 text-sm"></i>
+                    </div>
+                    <span class="font-bold text-sm">Egypt Tours</span>
+                    <span class="text-xs text-green-400 mr-auto">● Online</span>
+                  </div>
+
+                  <div class="space-y-3 text-sm">
+                    <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                      <p class="text-gray-300">Hi! My budget is $1000 and I want a beach vacation</p>
+                    </div>
+                    <div class="bg-sky-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                      <p class="text-sky-200">Welcome! Here are the best packages for your budget:</p>
+                      <div class="mt-2 space-y-2 text-xs">
+                        <div class="bg-sky-500/10 px-3 py-2 rounded-lg text-sky-100">
+                          <p class="font-bold">Hurghada - 5 Nights</p>
+                          <p>Hotel + Flights + Tours = $850</p>
+                        </div>
+                        <div class="bg-sky-500/10 px-3 py-2 rounded-lg text-sky-100">
+                          <p class="font-bold">Sharm El Sheikh - 4 Nights</p>
+                          <p>Hotel + Flights + Diving = $950</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                      <p class="text-gray-300">I'll take the Hurghada package!</p>
+                    </div>
+                    <div class="bg-sky-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                      <p class="text-sky-200">Booking confirmed! ✅</p>
+                      <p class="text-sky-200 text-xs mt-1">Hurghada - 5 Nights - $850</p>
+                      <p class="text-sky-200 text-xs">Confirmation sent to your email</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Language Badges -->
+                <div class="flex flex-wrap justify-center gap-2">
+                  <span class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full text-xs text-sky-300">EN</span>
+                  <span class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full text-xs text-sky-300">AR</span>
+                  <span class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full text-xs text-sky-300">FR</span>
+                  <span class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full text-xs text-sky-300">DE</span>
+                  <span class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full text-xs text-sky-300">ES</span>
+                  <span class="bg-sky-500/10 border border-sky-500/20 px-3 py-1 rounded-full text-xs text-sky-300">+50</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-0"></div>
+      <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">جاهز تبدأ مع PulseChat AI؟</h2>
+        <p class="text-gray-300 mb-8">احجز Demo مجاني مع فريقنا النهاردة</p>
+        <a href="../index.html#contact" class="inline-flex items-center bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/40">
+          <span>احجز ديمو مجاني</span>
+          <i class="fas fa-arrow-left mr-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-8">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 PulseChat AI. صنع بكل حب في مصر.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="../script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseChat AI | المطاعم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../image.png" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { cairo: ["Cairo", "sans-serif"] },
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#8B5CF6",
+              accent: "#10B981",
+              dark: "#0F172A",
+              darker: "#020617",
+              surface: "#1E293B",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="../index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-robot text-3xl text-primary animate-pulse"></i>
+            <span class="text-2xl font-bold tracking-wide">PulseChat <span class="text-primary">AI</span></span>
+          </a>
+          <a href="../index.html#sectors" class="bg-surface hover:bg-slate-700 border border-white/10 text-white px-6 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2">
+            <i class="fas fa-arrow-right"></i>
+            رجوع للقطاعات
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sector Content -->
+    <section class="pt-32 pb-20 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card rounded-2xl overflow-hidden">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <!-- Right Side: Visual -->
+            <div class="relative bg-surface min-h-[300px] md:min-h-full flex items-center justify-center p-8">
+              <div class="w-full max-w-sm space-y-4">
+                <!-- Chat Simulation -->
+                <div class="bg-dark/60 rounded-2xl p-5 border border-white/5">
+                  <div class="flex items-center gap-2 mb-4 pb-3 border-b border-white/5">
+                    <div class="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+                      <i class="fas fa-utensils text-orange-400 text-sm"></i>
+                    </div>
+                    <span class="font-bold text-sm">مطعم الشيف</span>
+                    <span class="text-xs text-green-400 mr-auto">● متصل</span>
+                  </div>
+
+                  <div class="space-y-3 text-sm">
+                    <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                      <p class="text-gray-300">عايز أطلب أكل للبيت</p>
+                    </div>
+                    <div class="bg-orange-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                      <p class="text-orange-200">أهلاً بيك يا أحمد! بناءً على طلباتك السابقة، ممكن يعجبك:</p>
+                      <div class="flex gap-2 mt-2 flex-wrap">
+                        <span class="bg-orange-500/30 px-3 py-1 rounded-full text-xs text-white">برجر كلاسيك 🍔</span>
+                        <span class="bg-orange-500/30 px-3 py-1 rounded-full text-xs text-white">بيتزا مارجريتا 🍕</span>
+                      </div>
+                      <p class="text-orange-200 mt-2 text-xs">وعندنا عرض النهاردة: وجبة كومبو بخصم 25%!</p>
+                    </div>
+                    <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                      <p class="text-gray-300">هاخد الكومبو وزود عليه كولا</p>
+                    </div>
+                    <div class="bg-orange-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                      <p class="text-orange-200">تم تأكيد طلبك ✅</p>
+                      <p class="text-orange-200 mt-1 text-xs">كومبو + كولا = 185 ج.م</p>
+                      <p class="text-orange-200 text-xs">الطلب اتبعت لفرع مدينة نصر 📍</p>
+                      <p class="text-orange-200 text-xs">وقت التوصيل المتوقع: 35 دقيقة 🚗</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 text-xs text-gray-500">
+                  <i class="fas fa-bolt"></i>
+                  <span>أوردر حقيقي على الفرع في ثواني</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left Side: Content -->
+            <div class="p-8 md:p-10">
+              <div class="inline-block px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 font-semibold text-xs mb-4">
+                قطاع المطاعم
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">إزاي بيشتغل مع المطاعم؟</h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">المطاعم من أكبر القطاعات اللي فيها ضغط على الوقت — كل ثانية بتوفرها في أي عملية بتزود مبيعاتك وبتحسن الكواليتي.</p>
+
+              <div class="space-y-4">
+                <div class="flex gap-3 items-start">
+                  <div class="bg-orange-500/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-book-open text-orange-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">قراءة المنيو وترشيح المنتجات</h4>
+                    <p class="text-sm text-gray-400">الـ AI بيقرأ المنيو كامل، بيعرف السعرات الحرارية والمحتويات والكميات، وبيرشح أكلات للعميل بناءً على الهيستوري بتاعته والأكلات اللي بيحبها + Upselling ذكي.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-green-500/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-shopping-bag text-green-500"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">إنشاء أوردر حقيقي وإرساله للفرع</h4>
+                    <p class="text-sm text-gray-400">بيعمل أوردر حقيقي وبيتبعت على الفرع المناسب للعميل فوراً عشان تبتدي عملية التحضير — أسرع من أي طريقة تانية.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-blue-500/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-map-marker-alt text-blue-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">متابعة الطلب والتوصيل</h4>
+                    <p class="text-sm text-gray-400">العميل يسأل "الأوردر فين؟" — الـ AI يروح يشوف حالة الأوردر على سيستم التوصيل ويرد بالتفاصيل، بيتربط مع أي سيستم داخلي شغال عليه المطعم.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-secondary/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-chair text-secondary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">حجوزات الطاولات داخل الصالة</h4>
+                    <p class="text-sm text-gray-400">مش بس توصيل — بيعمل حجوزات على طاولات معينة، ياخد المنيو من العميل، وكل ده بتعليمات مرة واحدة.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-accent/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-sync-alt text-accent"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">تحديثات Real-Time</h4>
+                    <p class="text-sm text-gray-400">أي تغيير في الأسعار، أصناف جديدة، أصناف اتشالت، أو كميات تغيرت — الـ AI شايفها فوراً وبيرشح المنتجات الصح للعميل.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 items-start">
+                  <div class="bg-red-500/20 p-2 rounded-lg mt-1 flex-shrink-0">
+                    <i class="fas fa-bullhorn text-red-400"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white">عروض وإلغاءات أوتوماتيك</h4>
+                    <p class="text-sm text-gray-400">بيبعت عروض وخصومات Bulk Message للعملاء، وبيعمل إلغاء أوردرات أوتوماتيك سواء من العميل أو المطعم — كل ده من غير أي تدخل بشري.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-0"></div>
+      <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">جاهز تبدأ مع PulseChat AI؟</h2>
+        <p class="text-gray-300 mb-8">احجز Demo مجاني مع فريقنا النهاردة</p>
+        <a href="../index.html#contact" class="inline-flex items-center bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/40">
+          <span>احجز ديمو مجاني</span>
+          <i class="fas fa-arrow-left mr-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-8">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 PulseChat AI. صنع بكل حب في مصر.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="../script.js" defer></script>
+  </body>
+</html>

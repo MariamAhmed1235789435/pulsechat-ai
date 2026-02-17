@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseChat AI | الخدمات المهنية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../image.png" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { cairo: ["Cairo", "sans-serif"] },
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#8B5CF6",
+              accent: "#10B981",
+              dark: "#0F172A",
+              darker: "#020617",
+              surface: "#1E293B",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="../index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-robot text-3xl text-primary animate-pulse"></i>
+            <span class="text-2xl font-bold tracking-wide">PulseChat <span class="text-primary">AI</span></span>
+          </a>
+          <a href="../index.html#sectors" class="bg-surface hover:bg-slate-700 border border-white/10 text-white px-6 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2">
+            <i class="fas fa-arrow-right"></i>
+            رجوع للقطاعات
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sector Content -->
+    <section class="pt-32 pb-20 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card p-8 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+            <!-- Content -->
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                  <i class="fas fa-briefcase text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-white">الخدمات المهنية</h3>
+                  <p class="text-emerald-400 text-sm">محامين • استشاريين • محاسبين • مراكز تدريب</p>
+                </div>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                الـ AI Agent بيتحول لمساعد مهني ذكي لمقدمي الخدمات. بيتعمله كونفيجريشن مرة واحدة وبيكون فاهم كل تفاصيل شغلك، وأي تعديل بيقرأه فوراً. والأهم - انت متحكم 100% في كل كلمة بيقولها.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-comments text-emerald-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">الرد على الاستفسارات والشكاوى</h4>
+                    <p class="text-gray-400 text-sm">بيرد على كل أسئلة العملاء اليومية بدقة، وبيتعامل مع الشكاوى باحترافية. لو محامي - يقدر يفهم القانون المصري بكل تفاصيله ويرد على الأسئلة القانونية.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-link text-emerald-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">ربط مع السيستم الداخلي</h4>
+                    <p class="text-gray-400 text-sm">بيتكامل مع نظامك الداخلي عشان يدير حجوزات الاستشارات والمواعيد أوتوماتيك، من غير تدخل منك.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-clipboard-list text-emerald-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">تجهيز العميل قبل الاستشارة</h4>
+                    <p class="text-gray-400 text-sm">بيسأل العميل أسئلة محددة، يجمع الورق المطلوب، ويجهز كل التفاصيل عشان لما يجي للمحامي أو المحاسب أو الاستشاري تكون الاستشارة جاهزة وناجحة بأكبر قدر من المعلومات.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-sliders-h text-emerald-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">تحكم كامل 100% في ردود الـ AI</h4>
+                    <p class="text-gray-400 text-sm">انت بتحدد بالظبط إيه اللي يقوله وإيه اللي ما يقولوش. ممكن تخليه يرد بتفاصيل قانونية أو تقوله يرجع العميل للمحامي مباشرة - القرار بإيدك بالكامل.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-cog text-emerald-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">إعداد مرة واحدة وتحديث فوري</h4>
+                    <p class="text-gray-400 text-sm">بتعمل كونفيجريشن مرة واحدة في الأول والـ AI بيكون عارف كل الداتا. أي تعديل بتعمله بيقرأه فوراً ويشتغل بيه من أول لحظة.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual: Chat Simulation -->
+            <div class="space-y-4">
+              <div class="bg-surface rounded-2xl p-5 border border-emerald-500/20">
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                    <i class="fas fa-gavel text-white text-xs"></i>
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-bold">PulseChat - مكتب المستشار القانوني</p>
+                    <p class="text-emerald-400 text-xs">متصل الآن</p>
+                  </div>
+                </div>
+                <div class="space-y-3 text-sm">
+                  <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                    <p class="text-gray-300">السلام عليكم، عايز أعمل استشارة قانونية بخصوص نزاع عقاري</p>
+                  </div>
+                  <div class="bg-emerald-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                    <p class="text-emerald-200">أهلاً بحضرتك! 😊 تمام، عشان نجهز استشارتك مع المحامي بأفضل شكل، محتاج أسألك شوية أسئلة:</p>
+                    <div class="mt-2 space-y-1 text-xs text-emerald-100">
+                      <p>1️⃣ العقار ده سكني ولا تجاري؟</p>
+                      <p>2️⃣ فيه عقد موثق في الشهر العقاري؟</p>
+                      <p>3️⃣ النزاع مع المالك ولا مستأجر ولا طرف تالت؟</p>
+                    </div>
+                  </div>
+                  <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                    <p class="text-gray-300">سكني، أيوه فيه عقد موثق، والنزاع مع المالك</p>
+                  </div>
+                  <div class="bg-emerald-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                    <p class="text-emerald-200">تمام! كمان محتاج منك الأوراق دي تكون جاهزة:</p>
+                    <div class="mt-2 space-y-1 text-xs text-emerald-100">
+                      <p>📄 صورة العقد الموثق</p>
+                      <p>📄 إثبات هوية (بطاقة رقم قومي)</p>
+                      <p>📄 أي مراسلات أو إنذارات سابقة</p>
+                    </div>
+                  </div>
+                  <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                    <p class="text-gray-300">تمام، عايز أحجز استشارة مع الأستاذ خالد</p>
+                  </div>
+                  <div class="bg-emerald-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                    <p class="text-emerald-200">تم حجز الاستشارة! ✅</p>
+                    <div class="mt-2 bg-emerald-500/10 px-3 py-2 rounded-lg text-xs text-emerald-100">
+                      <p class="font-bold">📋 ملخص الاستشارة</p>
+                      <p>المحامي: أ. خالد إبراهيم</p>
+                      <p>الموضوع: نزاع عقاري - عقار سكني</p>
+                      <p>الموعد: الأحد 4:00 م</p>
+                      <p class="mt-1 text-emerald-300">✅ تم تجهيز ملف العميل بكل التفاصيل للمحامي</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Control Badge -->
+              <div class="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 rounded-xl p-4 text-center">
+                <p class="text-emerald-300 font-bold">🎛️ تحكم كامل</p>
+                <p class="text-gray-400 text-xs mt-1">انت بتحدد حدود الـ AI - إيه يقوله وإيه يسيبه للمتخصص</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-0"></div>
+      <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">جاهز تبدأ مع PulseChat AI؟</h2>
+        <p class="text-gray-300 mb-8">احجز Demo مجاني مع فريقنا النهاردة</p>
+        <a href="../index.html#contact" class="inline-flex items-center bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/40">
+          <span>احجز ديمو مجاني</span>
+          <i class="fas fa-arrow-left mr-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-8">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 PulseChat AI. صنع بكل حب في مصر.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="../script.js" defer></script>
+  </body>
+</html>

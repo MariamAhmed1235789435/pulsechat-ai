@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseChat AI | المستشفيات</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../image.png" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: { cairo: ["Cairo", "sans-serif"] },
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#8B5CF6",
+              accent: "#10B981",
+              dark: "#0F172A",
+              darker: "#020617",
+              surface: "#1E293B",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-dark/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="../index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-robot text-3xl text-primary animate-pulse"></i>
+            <span class="text-2xl font-bold tracking-wide">PulseChat <span class="text-primary">AI</span></span>
+          </a>
+          <a href="../index.html#sectors" class="bg-surface hover:bg-slate-700 border border-white/10 text-white px-6 py-2 rounded-full text-sm font-bold transition-all flex items-center gap-2">
+            <i class="fas fa-arrow-right"></i>
+            رجوع للقطاعات
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sector Content -->
+    <section class="pt-32 pb-20 bg-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="glass-card p-8 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+            <!-- Visual: Chat Simulation -->
+            <div class="space-y-4">
+              <div class="bg-surface rounded-2xl p-5 border border-rose-500/20">
+                <div class="flex items-center gap-2 mb-4">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center">
+                    <i class="fas fa-hospital text-white text-xs"></i>
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-bold">PulseChat - مستشفى النور الدولي</p>
+                    <p class="text-rose-400 text-xs">متصل الآن • 24/7</p>
+                  </div>
+                </div>
+                <div class="space-y-3 text-sm">
+                  <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                    <p class="text-gray-300">السلام عليكم، عايز أحجز كشف قلب عند دكتور أحمد في فرع مدينة نصر</p>
+                  </div>
+                  <div class="bg-rose-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                    <p class="text-rose-200">أهلاً بحضرتك! 😊 للأسف د. أحمد مش متاح في فرع مدينة نصر الأسبوع ده.</p>
+                    <p class="text-rose-200 mt-1">لكن عندي بدائل ممتازة:</p>
+                    <div class="mt-2 space-y-2 text-xs">
+                      <div class="bg-rose-500/10 px-3 py-2 rounded-lg text-rose-100">
+                        <p class="font-bold">🔄 د. أحمد - فرع المعادي</p>
+                        <p>متاح السبت 3:00 م</p>
+                      </div>
+                      <div class="bg-rose-500/10 px-3 py-2 rounded-lg text-rose-100">
+                        <p class="font-bold">⭐ د. سارة محمود - قلب وأوعية (فرع مدينة نصر)</p>
+                        <p>متاحة بكره 11:00 ص • تقييم 4.9/5</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                    <p class="text-gray-300">تمام، احجزلي عند د. سارة بكره</p>
+                  </div>
+                  <div class="bg-rose-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                    <p class="text-rose-200">تم الحجز بنجاح! ✅</p>
+                    <p class="text-rose-200 text-xs mt-1">د. سارة محمود - قلب وأوعية</p>
+                    <p class="text-rose-200 text-xs">فرع مدينة نصر - بكره 11:00 ص</p>
+                    <p class="text-rose-200 text-xs mt-1">📩 تم إرسال تأكيد الحجز على واتساب</p>
+                  </div>
+                  <div class="bg-white/5 rounded-xl rounded-tr-none p-3 max-w-[85%] mr-auto">
+                    <p class="text-gray-300">كمان عايز نتيجة تحاليل الدم اللي عملتها الأسبوع اللي فات</p>
+                  </div>
+                  <div class="bg-rose-500/20 rounded-xl rounded-tl-none p-3 max-w-[85%]">
+                    <p class="text-rose-200">تمام! لقيت نتائج التحاليل بتاعتك 📋</p>
+                    <p class="text-rose-200 text-xs mt-1">📄 جاري إرسال ملف PDF بالنتائج...</p>
+                    <div class="mt-2 bg-rose-500/10 px-3 py-2 rounded-lg text-rose-100 text-xs flex items-center gap-2">
+                      <i class="fas fa-file-pdf text-rose-400 text-lg"></i>
+                      <div>
+                        <p class="font-bold">تحاليل_دم_محمد_2026.pdf</p>
+                        <p class="text-rose-300">تم الإرسال ✅</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center">
+                  <i class="fas fa-hospital text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold text-white">المستشفيات</h3>
+                  <p class="text-rose-400 text-sm">وكيل ذكي يدير مستشفى كامل بأتمتة شاملة</p>
+                </div>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                تخيل موظف خدمة عملاء مثالي - مش بياخد أجازات، شغال 24 ساعة في اليوم 7 أيام في الأسبوع، مش بيغلط أبداً، بيتكلم كل اللغات، وفاهم شغل المستشفى 100%. ده بالظبط اللي PulseChat بيقدمه للمستشفيات.
+              </p>
+
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-clock text-rose-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">متاح 24/7 بدون أخطاء</h4>
+                    <p class="text-gray-400 text-sm">شغال على مدار الساعة، بيرد على كل الاستفسارات والشكاوى بدقة 100% وبيتعامل مع كل عميل بأسلوب يناسب حالته النفسية.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-calendar-check text-rose-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">حجز ذكي لـ 200+ دكتور عبر فروع متعددة</h4>
+                    <p class="text-gray-400 text-sm">بيدير حجوزات مئات الأطباء في كل التخصصات والفروع. لو دكتور مش متاح، بيقترح بدائل فوراً أو يعرض نفس الدكتور في فرع تاني.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-file-medical text-rose-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">إرسال نتائج التحاليل والأشعة تلقائياً</h4>
+                    <p class="text-gray-400 text-sm">متصل بنظام المستشفى الداخلي وبيبعت نتائج التحاليل والأشعة كملفات PDF للمرضى أوتوماتيك على واتساب بمجرد ما تكون جاهزة.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-bell text-rose-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">إشعارات وتنبيهات ذكية</h4>
+                    <p class="text-gray-400 text-sm">بيبعت تذكير بالمواعيد، وفي حالة غياب دكتور بيتواصل مع كل المرضى المحجوزين ويعرض بدائل أو يعيد الجدولة تلقائياً.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-ambulance text-rose-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">استجابة فورية للطوارئ</h4>
+                    <p class="text-gray-400 text-sm">بيتعرف على حالات الطوارئ فوراً وبيوجه المريض لأقرب فرع أو قسم طوارئ مع إبلاغ الفريق الطبي في نفس اللحظة.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-rose-500/10 flex items-center justify-center mt-1">
+                    <i class="fas fa-brain text-rose-400 text-sm"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-semibold">بيتعلم ويتطور من بيانات العملاء</h4>
+                    <p class="text-gray-400 text-sm">بيحفظ تاريخ كل مريض وبيتعلم من تفاعلاته. بيعرف يتعامل مع العميل الزعلان غير الراضي غير اللي عنده استفسار بسيط - كل واحد بأسلوبه.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Automation Badge -->
+              <div class="bg-gradient-to-r from-rose-500/10 to-pink-500/10 border border-rose-500/20 rounded-xl p-4 text-center">
+                <p class="text-rose-300 font-bold text-lg">🏥 أتمتة شاملة</p>
+                <p class="text-gray-400 text-sm mt-1">متصل بنظام المستشفى الداخلي بالكامل - من الحجز للتحاليل للأشعة للإشعارات - كل حاجة أوتوماتيك</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-0"></div>
+      <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">جاهز تبدأ مع PulseChat AI؟</h2>
+        <p class="text-gray-300 mb-8">احجز Demo مجاني مع فريقنا النهاردة</p>
+        <a href="../index.html#contact" class="inline-flex items-center bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-lg shadow-primary/40">
+          <span>احجز ديمو مجاني</span>
+          <i class="fas fa-arrow-left mr-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-white/5 py-8">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 PulseChat AI. صنع بكل حب في مصر.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="../script.js" defer></script>
+  </body>
+</html>
